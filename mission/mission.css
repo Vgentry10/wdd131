@@ -1,0 +1,62 @@
+
+body {
+    background-color: whitesmoke;
+    font-size: 20px;
+    margin: 100px;
+}
+
+#content {
+    max-width: 700px;
+    border: 2px solid lightgray;
+    margin: 100px auto;
+    padding: 100px;
+    padding-bottom: 0px;
+    padding-top: 50px;
+    background-color: white;
+    font-style: "Times New Roman", Times;
+}
+
+.list {
+    font-size: 17px;
+    
+}
+
+ol {
+    padding-left: 0%;
+}
+
+li {
+    margin-bottom: 27px;
+}
+
+p {
+    margin: top 20px;
+    font-size: 17px;   
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(57, 173, 211);
+}
+
+h4 {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 175px;
+    display: block ;
+    margin: 50px auto;
+}
