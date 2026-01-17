@@ -5,6 +5,13 @@ body {
     margin: 100px;
 }
 
+select {
+    transform: scale(1.1);
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
 #content {
     max-width: 700px;
     border: 2px solid lightgray;
