@@ -1,0 +1,31 @@
+
+body {
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    transition: background-image 1s ease;
+    
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#logo {
+    margin-top: 1rem;
+    width: 300px;
+}
+
+.content {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+          
