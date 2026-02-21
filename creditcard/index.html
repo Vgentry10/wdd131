@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main>
+        <form class="creditCard" action="a" method="get">
+            <section class="errors"></section>
+            <div class="frontCard">
+                <p id="creditCardNumberContainer" class="hide" role="region" aria-labelledby="creditCardLabel">
+                    <p id="total">Total: $199</p> 
+                    <label id="creditCardLabel" for="creditCardNumber">Credit Card Number:</label>
+                    <input
+                    type="text"
+                    id="creditCardNumber"
+                    name="creditCardNumber"
+                    pattern="[0-9]{16}"
+                    placeholder="Enter 16 digits"
+                    required
+                    />
+                    <label id="fullname" for="fullname">Full Name</label>
+                    <input 
+                    type="text" 
+                    id="namebox" 
+                    name="fullname" 
+                    required>
+                    <label id="expirationDate" for="expirationDate">Expiration</label>
+                    <input 
+                    type="text" 
+                    id="month" 
+                    name="expMonth" 
+                    placeholder="MM" 
+                    aria-labelledby="expirationDate">
+                    <input 
+                    type="text" 
+                    id="year" 
+                    name="expYear" 
+                    placeholder="YY" 
+                    aria-labelledby="expirationDate">
+                </p>
+            </div>
+            <div class="backCard">
+                <p id="CVC">
+                    <label for="cvc">CVC:</label>
+                    <input 
+                    type="text" 
+                    id="cvc" 
+                    name="cvc" 
+                    pattern="[0-9]{3}" 
+                    placeholder="xxx" 
+                    required>
+                </p>
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body {
+    margin: 200px;
+}
+
+
+.creditCard {
+  display: grid;
+  grid-template-columns: 100px 300px 100px;
+  grid-template-rows: 50px 200px 50px 50px;
+
+}
+
+.frontCard {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 250px 110px ;
+    grid-template-rows: 75px 75px 70px;
+}
+
+
+#total {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#creditCardLabel {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-height: 20px;
+}
+
+#creditCardNumber {
+    max-height: 20px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 25px;
+    margin-bottom: 5px;
+
+}
+
+#fullname {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    max-height: 20px;
+}
+
+#namebox {
+    max-height: 20px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-top: 25px;
+    max-width: 150px;
+}
+
+#expirationDate {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    max-height: 20px;
+}
+
+#month, #year {
+    max-height: 20px;
+    max-width: 25px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 25px;
+
+}
+
+#year {
+    margin-left: 35px;
+}
+
+
+.backCard {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 300px 100px;
+    grid-template-rows: 80px 80px 75px;
+}
+
+#CVC {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    max-width: 50px; 
+}
+
+#cvc {
+    max-width: 40px;
+    max-height: 20px;
+    margin-top: 5px;
+}
+
+#submit {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+
+
