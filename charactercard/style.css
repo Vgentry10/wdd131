@@ -1,0 +1,77 @@
+/* Basic styles adapted from the example */
+body {
+  font-family: "Palatino Linotype", "Palatino", serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.character-card {
+  background: #313131;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+  width: 400px;
+  margin: 60px auto;
+  overflow: hidden;
+  color: #f0f4f8;
+}
+
+.image {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+}
+
+#name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  padding: 15px 0 15px 35px;
+  background-color: #5d747b;
+}
+
+.stats {
+  margin: 10px 15px 7px 35px;
+  text-align: left;
+ 
+  
+}
+
+.stats p {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.buttons {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5d747b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #58605a;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+#message {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #dfefff;
+}

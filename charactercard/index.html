@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="character-card" aria-label="Character Card"></section>
+        <img src="images/snortleblat.webp" alt="Character Image" class="image">
+        <h2 id="name">Snortleblat</h2>
+        <div class="stats" id="stats">
+            <p><strong>Class:</strong> <span id="char-class">Swamp Beast Diplomat</span></p>
+            <p><strong>Level:</strong> <span id="char-level">1</span></p>
+            <p><strong>Health:</strong> <span id="char-health">100</span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="attack-btn">Attacked</button>
+            <button id="levelup-btn">Level Up</button>
+        </div>
+
+        <p id="message" role="status" aria-live="polite"></p>
+    </div>      
+</body>
+<footer></footer>
+</html>
