@@ -1,0 +1,162 @@
+
+
+:root{
+  --border:#000;
+  --accent:#0b7bd1;
+  --max-width:420px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin:0;
+  padding:1.25rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  
+}
+
+
+main, header, footer{
+  width:100%;
+  max-width:var(--max-width);
+}
+
+
+.site-header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.75rem;
+  margin-bottom:1rem;
+}
+
+
+.brand .logo{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+}
+
+
+.site-title{
+  margin:0;
+  font-family:'Amatic SC', cursive;
+  font-size:2.25rem;
+  color:var(--border);
+  letter-spacing:1px;
+}
+
+
+.search-area{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:.25rem;
+}
+.search-area input[type="search"]{
+  flex:1;
+  padding:.55rem .75rem;
+  border:2px solid var(--border);
+  border-radius:6px;
+  font-size:0.95rem;
+  outline:none;
+}
+.search-area .search-btn img{
+  width:44px;
+  height:44px;
+  border:2px solid var(--border);
+  border-left:0;
+  border-radius:0 6px 6px 0;
+  background:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.recipe-card{
+  border:2px solid var(--border);
+  border-radius:8px;
+  padding:10px;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+}
+
+
+.recipe-image{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:6px;
+  display:block;
+  border:4px solid #fff;
+  box-shadow:0 0 0 2px var(--border) inset;
+}
+
+
+.genre{
+  display:inline-block;
+  padding:.2rem .45rem;
+  border:1px solid var(--border);
+  border-radius:6px;
+  font-size:.8rem;
+  background:#fff;
+  margin-top:6px;
+}
+
+
+.title{
+  margin:.25rem 0 0 0;
+  font-family:'Amatic SC', cursive;
+  font-size:1.6rem;
+  color:var(--accent);
+}
+
+
+.meta .star{color:#f5c542; margin-right:.1rem}
+.meta .star-empty{color:#ccc}
+
+
+.description{
+  margin:0;
+  color:#222;
+  font-size:.95rem;
+  line-height:1.35;
+}
+
+.site-footer{
+  margin-top:1rem;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  gap:.6rem;
+}
+.site-footer .social img{
+  width:28px;
+  height:28px;
+  border:2px solid var(--border);
+  padding:6px;
+  border-radius:6px;
+  background:#fff;
+}
+
+
+.sr-only{
+  position:absolute !important;
+  width:1px; height:1px;
+  padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+
+@media screen and (max-width:550px){
+  .description{display:none}
+}
+
+
+}
+

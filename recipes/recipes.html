@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recipe Book — Apple Crisp</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Simple Recipe Book">
+  <meta property="og:description" content="A small responsive recipe page built with flexbox.">
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd131/recipes">
+  <meta property="og:image" content="images/social-preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Simple Recipe Book">
+  <meta name="twitter:description" content="A small responsive recipe page built with flexbox.">
+  <meta name="twitter:image" content="images/social-preview.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/recipe-book.png" alt="Recipe Book logo" class="logo">
+      <span class="site-title">Recipe Book</span>
+    </div>
+
+    <div class="search-area" role="search" aria-label="Search recipes">
+      <label for="search" class="sr-only">Search recipes</label>
+      <input id="search" type="search" placeholder="Search recipes" />
+      <button class="search-btn" aria-label="Search">
+        <img src="images/search.svg" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="recipe-card">
+      <div class="recipe-details">
+        <img src="images/apple-crisp.jpg" alt="A bowl of apple crisp ice cream" class="recipe-image">
+        <h3 class="genre">Dessert</h3>
+        <h2 class="title">Apple Crisp</h2>
+        <div class="meta">
+          <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+            <span aria-hidden="true" class="star">⭐</span>
+            <span aria-hidden="true" class="star">⭐</span>
+            <span aria-hidden="true" class="star">⭐</span>
+            <span aria-hidden="true" class="star">⭐</span>
+            <span aria-hidden="true" class="star-empty">☆</span>
+          </span>
+        </div>
+
+        <p class="description">
+          A warm, cozy apple crisp with a buttery oat topping — perfect with vanilla ice cream.
+          This description is purposefully longer to demonstrate the desktop view where it appears.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="social">
+      <a href="#" aria-label="Instagram"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
+      <a href="#" aria-label="YouTube"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
+      <a href="#" aria-label="Pinterest"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+    </div>
+
+    <p class="attribution">
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </p>
+  </footer>
+</body>
+</html>
