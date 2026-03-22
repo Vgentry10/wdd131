@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YearReads — My Favorite Books of 2026</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+<script src="index.js" defer></script>
+    
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo-yearreads.svg" alt="YearReads logo" class="logo" />
+      <span class="wordmark">YearReads</span>
+    </div>
+    <nav class="nav">
+      <button id="homeBtn">Home</button>
+      <button id="allBooksBtn">All Books</button>
+      <button id="featuredBtn">Featured</button>
+      <button id="notesBtn">Notes</button>
+      <button id="aboutBtn">About</button>
+    </nav>
+    <div class="controls">
+      <input id="searchInput" placeholder="Search books..." aria-label="Search books" />
+      <button id="themeToggle" aria-pressed="false">🌙</button>
+      <button id="addBookBtn">+ Add Book</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>My Favorite Books of 2026</h1>
+        <p>Curated reads, personal notes, and progress tracking.</p>
+        <div class="hero-ctas">
+          <button id="browseBtn">Browse Books</button>
+          <button id="addBtn">Add Book</button>
+        </div>
+      </div>
+      <div class="hero-carousel" aria-hidden="false">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+    </section>
+
+    <!-- Quick filters -->
+    <section class="filters">
+      <select id="genreFilter"><option value="">All genres</option></select>
+      <div class="statusBtns">
+        <button data-status="">All</button>
+        <button data-status="To Read">To Read</button>
+        <button data-status="Reading">Reading</button>
+        <button data-status="Finished">Finished</button>
+      </div>
+      <select id="sortSelect">
+        <option value="date-desc">Date (new→old)</option>
+        <option value="rating-desc">Rating (high→low)</option>
+        <option value="title-asc">Title (A→Z)</option>
+      </select>
+      <button id="viewToggle">Grid</button>
+    </section>
+
+    <!-- Book grid/list -->
+    <section id="booksSection" class="books grid" aria-live="polite"></section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <small>YearReads • Share your yearly favorites</small>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div id="detailModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" tabindex="-1"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-body">
+        <img id="modalCover" alt="" class="modal-cover" loading="lazy">
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p id="modalAuthor" class="muted"></p>
+          <p id="modalGenre" class="muted"></p>
+          <div class="rating">
+            <label>Rating:</label>
+            <div id="ratingStars" class="stars" role="radiogroup"></div>
+          </div>
+          <label>Progress: <span id="progressVal">0%</span></label>
+          <input id="progressRange" type="range" min="0" max="100" step="1">
+          <label for="notesArea">Notes</label>
+          <textarea id="notesArea" rows="6"></textarea>
+          <div class="modal-actions">
+            <a id="externalLink" target="_blank" rel="noopener">Buy / Borrow</a>
+            <button id="saveBtn">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

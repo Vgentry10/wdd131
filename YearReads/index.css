@@ -1,0 +1,104 @@
+:root{
+  --color-primary:#396E94; --color-accent:#E7C24F; --color-accent-2:#A43312;
+  --color-deep:#381D2A; --color-soft:#AABD8C; --bg:#F8FAFC; --text:#0F172A;
+  --font-heading: 'Merriweather', serif; --font-body: 'Inter', system-ui, sans-serif;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+body{font-family:var(--font-body);margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06);position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:40px;height:40px}
+.wordmark{font-family:var(--font-heading);font-weight:700;font-size:1.15rem;color:var(--color-primary)}
+.nav button{background:none;border:none;margin:0 6px;padding:6px 8px;color:var(--text);cursor:pointer}
+.controls{display:flex;align-items:center;gap:8px}
+#searchInput{padding:8px;border-radius:8px;border:1px solid #e6eef6;min-width:160px}
+#themeToggle,#addBookBtn{padding:8px;border-radius:8px;border:1px solid #e6eef6;background:#fff;cursor:pointer}
+
+/* Layout */
+.container{max-width:1100px;margin:20px auto;padding:0 16px}
+.hero{display:flex;gap:20px;align-items:center;padding:24px;background:linear-gradient(90deg,#fff 60%,rgba(57,110,148,.03));border-radius:12px}
+.hero-text h1{font-family:var(--font-heading);margin:0 0 6px}
+.hero-ctas button{margin-right:8px;padding:8px 12px;border-radius:8px;border:0;background:var(--color-primary);color:#fff;cursor:pointer}
+.hero-carousel{width:220px;height:140px;overflow:hidden;border-radius:8px;display:flex;align-items:center;justify-content:center;background:#fff}
+.carousel-track{display:flex;gap:8px;padding:8px}
+.carousel-item{width:80px;height:120px;background:#e9f1fa;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center}
+
+/* Filters */
+.filters{display:flex;gap:12px;align-items:center;margin:16px 0;padding:10px;background:#fff;border-radius:10px;border:1px solid #eef3f7;position:sticky;top:72px;z-index:40}
+.filters select,.filters button{padding:8px;border-radius:8px;border:1px solid #e6eef6;background:#fff}
+
+/* Books grid & list */
+.books.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.books.list{display:flex;flex-direction:column;gap:10px}
+.card{background:#fff;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px;box-shadow:0 4px 14px rgba(0,0,0,.06);transform:translateY(6px);opacity:0;animation:enter .36s forwards}
+@keyframes enter{to{transform:none;opacity:1}}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:6px}
+.card .meta{display:flex;justify-content:space-between;align-items:center}
+.muted{color:#475569;font-size:0.9rem}
+.progress{height:6px;background:#eef6fb;border-radius:6px;overflow:hidden}
+.progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--color-accent),var(--color-primary))}
+.card-actions{display:flex;gap:8px}
+.small-btn{padding:6px 8px;border-radius:8px;border:1px solid #e6eef6;background:#fff;cursor:pointer}
+
+/* Modal */
+.modal{display:none;position:fixed;inset:0;align-items:center;justify-content:center;z-index:80}
+.modal[aria-hidden="false"]{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(3,7,18,.45)}
+.modal-panel{position:relative;background:#fff;border-radius:12px;max-width:900px;width:95%;max-height:90%;overflow:auto;z-index:81}
+.modal-body{display:flex;gap:16px;padding:18px}
+.modal-cover{width:200px;height:300px;object-fit:cover;border-radius:6px}
+.modal-info{flex:1}
+.modal-close{position:absolute;right:10px;top:10px;border:0;background:none;font-size:18px;cursor:pointer}
+.stars{display:flex;gap:6px}
+.stars button{background:none;border:0;font-size:20px;cursor:pointer}
+
+/* Toast */
+.toast{position:fixed;right:20px;bottom:20px;background:#111;color:#fff;padding:10px 14px;border-radius:8px;opacity:0;transform:translateY(10px);transition:all .28s;z-index:90}
+.toast.show{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .modal-body{flex-direction:column;align-items:center}
+  .modal-cover{width:50%;height:auto}
+}
+
+/* Theme variables: default = light */
+:root{
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --text: #0F172A;
+  --muted: #475569;
+  --color-primary: #396E94;
+  --color-accent: #E7C24F;
+  --card-shadow: 0 4px 14px rgba(0,0,0,.06);
+}
+
+/* Dark theme overrides: applied when data-theme="dark" on <html> */
+:root[data-theme="dark"]{
+  --bg: #071029;
+  --surface: #0b1116;
+  --text: #E6EEF6;
+  --muted: #9FB3C8;
+  --color-primary: #5EA4D6;
+  --color-accent: #F6D977;
+  --card-shadow: 0 6px 20px rgba(0,0,0,.6);
+}
+
+/* Use variables throughout (examples) */
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+.site-header, .filters, .card, .modal-panel, .hero-carousel{
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+}
+.muted{ color: var(--muted); }
+button, input, select, textarea{
+  background: linear-gradient(transparent, transparent);
+  color: var(--text);
+  border-color: rgba(15,23,42,0.06);
+}
+
