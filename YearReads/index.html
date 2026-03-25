@@ -1,164 +1,129 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YearReads | My Favorite Books of 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="index.css" />
-  <script src="index.js" defer></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>YearReads</title>
+	<link rel="stylesheet" href="index.css" />
+	<script src="index.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#mainContent">Skip to content</a>
+	<header>
+		<h1>YearReads</h1>
+		<nav aria-label="Primary navigation">
+			<a href="#top">Home</a>
+			<a href="#allBooks">All Books</a>
+			<a href="#featured">Featured</a>
+			<a href="#notes">Notes</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+		</nav>
+		<div>
+			<label for="searchInput">Search</label>
+			<input id="searchInput" list="titleSuggestions" placeholder="Search books" />
+			<datalist id="titleSuggestions"></datalist>
+			<button id="themeToggle" type="button" aria-pressed="false">Theme</button>
+			<button id="addBookBtn" type="button">Add Book</button>
+		</div>
+	</header>
 
-  <header class="site-header" id="top">
-    <div class="brand">
-      <img src="images/logo-yearreads.svg" alt="YearReads logo" class="logo" />
-      <span class="wordmark">YearReads</span>
-    </div>
+	<main id="top">
+		<section>
+			<h2>My Favorite Books of 2026</h2>
+			<p>Curated reads, personal notes, and progress tracking.</p>
+			<button id="browseBtn" type="button">Browse Books</button>
+			<button id="quickAddBtn" type="button">Add Book</button>
+			<div id="carouselTrack" aria-label="Featured covers"></div>
+		</section>
 
-    <nav class="nav" aria-label="Primary">
-      <a href="#top">Home</a>
-      <a href="#allBooks">All Books</a>
-      <a href="#featured">Featured</a>
-      <a href="#notes">Notes</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+		<section id="featured" aria-labelledby="featuredTitle">
+			<h2 id="featuredTitle">Featured</h2>
+			<div id="featuredGrid"></div>
+		</section>
 
-    <div class="controls">
-      <label class="sr-only" for="searchInput">Search books</label>
-      <input id="searchInput" list="titleSuggestions" placeholder="Search title, author, notes" autocomplete="off" />
-      <datalist id="titleSuggestions"></datalist>
-      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" aria-pressed="false">Moon</button>
-      <button id="addBookBtn" class="cta-btn">Add Book</button>
-    </div>
-  </header>
+		<section aria-labelledby="recentTitle">
+			<h2 id="recentTitle">Recent Reads</h2>
+			<div id="recentGrid"></div>
+		</section>
 
-  <main class="page" id="mainContent">
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-text">
-        <p class="kicker">YEARREADS 2026</p>
-        <h1 id="heroTitle">My Favorite Books of 2026</h1>
-        <p>Curated reads, personal notes, and progress tracking.</p>
-        <div class="hero-ctas">
-          <button id="browseBtn" class="cta-btn">Browse Books</button>
-          <button id="quickAddBtn" class="ghost-btn">Add Book</button>
-        </div>
-      </div>
-      <div class="hero-carousel" aria-label="Featured covers">
-        <div id="carouselTrack" class="carousel-track"></div>
-      </div>
-    </section>
+		<section aria-label="Filters">
+			<div>
+				<label for="genreFilter">Genre</label>
+				<select id="genreFilter">
+					<option value="">All genres</option>
+				</select>
+			</div>
 
-    <section class="featured" id="featured" aria-labelledby="featuredTitle">
-      <div class="section-head">
-        <h2 id="featuredTitle">Top Picks</h2>
-      </div>
-      <div id="featuredGrid" class="featured-grid"></div>
-    </section>
+			<div class="statusBtns" role="group" aria-label="Reading status">
+				<button class="active" data-status="" type="button">All</button>
+				<button data-status="Finished" type="button">Finished</button>
+				<button data-status="Reading" type="button">Reading</button>
+				<button data-status="To Read" type="button">To Read</button>
+			</div>
 
-    <section class="recent" aria-labelledby="recentTitle">
-      <div class="section-head">
-        <h2 id="recentTitle">Recent Reads</h2>
-      </div>
-      <div id="recentGrid" class="featured-grid"></div>
-    </section>
+			<div>
+				<label for="sortSelect">Sort</label>
+				<select id="sortSelect">
+					<option value="date-desc">Date</option>
+					<option value="rating-desc">Rating</option>
+					<option value="title-asc">Title</option>
+				</select>
+			</div>
 
-    <section class="filters" aria-label="Book filters">
-      <div class="filter-row">
-        <label for="genreFilter">Genre</label>
-        <select id="genreFilter">
-          <option value="">All genres</option>
-        </select>
-      </div>
+			<button id="clearFiltersBtn" type="button">Clear Filters</button>
+			<button id="viewToggle" type="button">Grid View</button>
+		</section>
 
-      <div class="filter-row statusBtns" role="group" aria-label="Reading status">
-        <button class="active" data-status="">All</button>
-        <button data-status="Finished">Finished</button>
-        <button data-status="Reading">Reading</button>
-        <button data-status="To Read">To Read</button>
-      </div>
+		<section id="allBooks" aria-labelledby="allBooksTitle">
+			<h2 id="allBooksTitle">All Books</h2>
+			<p id="resultsCount"></p>
+			<section id="booksSection" aria-live="polite"></section>
+		</section>
 
-      <div class="filter-row">
-        <label for="sortSelect">Sort</label>
-        <select id="sortSelect">
-          <option value="date-desc">Date (new to old)</option>
-          <option value="rating-desc">Rating (high to low)</option>
-          <option value="title-asc">Title (A to Z)</option>
-        </select>
-      </div>
+		<section id="notes" aria-labelledby="notesTitle">
+			<h2 id="notesTitle">Latest Highlights</h2>
+			<ul id="notesList"></ul>
+		</section>
 
-      <div class="filter-row control-inline">
-        <button id="clearFiltersBtn" class="ghost-btn" type="button">Clear filters</button>
-        <button id="viewToggle" class="ghost-btn" type="button">Grid View</button>
-      </div>
-    </section>
+		<section id="about" aria-labelledby="aboutTitle">
+			<h2 id="aboutTitle">About</h2>
+			<p>YearReads is a personal reading library for tracking books, ratings, and notes.</p>
+		</section>
+	</main>
 
-    <section id="allBooks" aria-labelledby="allBooksTitle">
-      <div class="section-head">
-        <h2 id="allBooksTitle">All Books</h2>
-        <p id="resultsCount" class="muted"></p>
-      </div>
-      <section id="booksSection" class="books grid" aria-live="polite"></section>
-    </section>
+	<footer id="contact">
+		<p>Contact: Share recommendations with friends and readers.</p>
+		<small>YearReads</small>
+	</footer>
 
-    <section id="notes" class="notes-preview" aria-labelledby="notesTitle">
-      <div class="section-head">
-        <h2 id="notesTitle">Latest Highlights</h2>
-      </div>
-      <ul id="notesList"></ul>
-    </section>
+	<div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+		<div class="modal-backdrop"></div>
+		<article class="modal-panel" role="document" tabindex="-1">
+			<button id="modalClose" type="button" aria-label="Close">Close</button>
+			<img id="modalCover" alt="Book cover" loading="lazy" />
+			<h2 id="modalTitle"></h2>
+			<p id="modalAuthor"></p>
+			<p id="modalGenre"></p>
 
-    <section id="about" class="about">
-      <h2>About YearReads</h2>
-      <p>
-        YearReads is my personal reading archive for tracking progress, capturing thoughts,
-        and sharing the books worth recommending.
-      </p>
-    </section>
-  </main>
+			<div>
+				<p>Rating</p>
+				<div id="ratingStars" role="radiogroup" aria-label="Book rating"></div>
+			</div>
 
-  <footer id="contact" class="site-footer">
-    <p>Share this shelf with fellow readers and reading groups.</p>
-    <small>YearReads 2026</small>
-  </footer>
+			<label for="progressRange">Progress <span id="progressVal">0%</span></label>
+			<input id="progressRange" type="range" min="0" max="100" step="1" />
 
-  <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
-    <div class="modal-backdrop"></div>
-    <article class="modal-panel" role="document" tabindex="-1">
-      <button id="modalClose" class="modal-close" aria-label="Close details">Close</button>
-      <div class="modal-body">
-        <img id="modalCover" class="modal-cover" alt="" loading="lazy" />
+			<label for="notesArea">Notes</label>
+			<textarea id="notesArea" rows="6"></textarea>
 
-        <div class="modal-info">
-          <h2 id="modalTitle"></h2>
-          <p id="modalAuthor" class="muted"></p>
-          <p id="modalGenre" class="muted"></p>
+			<div>
+				<a id="externalLink" target="_blank" rel="noopener noreferrer">Buy or Borrow</a>
+				<button id="saveBtn" type="button">Save</button>
+				<button id="markFinishedBtn" type="button">Mark Finished</button>
+			</div>
+		</article>
+	</div>
 
-          <div class="rating-wrap">
-            <span>Rating</span>
-            <div id="ratingStars" class="stars" role="radiogroup" aria-label="Book rating"></div>
-          </div>
-
-          <label for="progressRange">Progress <span id="progressVal">0%</span></label>
-          <input id="progressRange" type="range" min="0" max="100" step="1" />
-
-          <label for="notesArea">Personal notes</label>
-          <textarea id="notesArea" rows="7" placeholder="Capture thoughts, quotes, and highlights..."></textarea>
-
-          <div class="modal-actions">
-            <a id="externalLink" target="_blank" rel="noopener noreferrer">Buy or Borrow</a>
-            <button id="saveBtn" class="cta-btn" type="button">Save</button>
-            <button id="markFinishedBtn" class="ghost-btn" type="button">Mark Finished</button>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div id="toast" class="toast" aria-live="polite"></div>
+	<div id="toast" aria-live="polite"></div>
 </body>
 </html>
