@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" role="img" aria-labelledby="title desc">
+  <title id="title">YearReads Logo</title>
+  <desc id="desc">Minimal open-book icon with a small star and the YearReads wordmark.</desc>
+  <defs>
+    <linearGradient id="bookFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#396E94" />
+      <stop offset="100%" stop-color="#AABD8C" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(10 14)">
+    <path d="M18 82V20c16 0 26 4 36 12v64c-10-8-20-12-36-12z" fill="url(#bookFill)" stroke="#381D2A" stroke-width="2" />
+    <path d="M92 82V20c-16 0-26 4-36 12v64c10-8 20-12 36-12z" fill="url(#bookFill)" stroke="#381D2A" stroke-width="2" />
+    <path d="M55 10l4 8 9 1-6 6 2 8-9-4-9 4 2-8-6-6 9-1z" fill="#E7C24F" stroke="#A43312" stroke-width="1.5" />
+  </g>
+  <text x="130" y="73" font-family="Merriweather, serif" font-size="48" font-weight="700" fill="#381D2A">YearReads</text>
+</svg>

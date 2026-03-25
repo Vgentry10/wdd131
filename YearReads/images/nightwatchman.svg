@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" role="img" aria-labelledby="t">
+  <title id="t">Cover of The Night Watchman</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#381D2A" />
+      <stop offset="100%" stop-color="#396E94" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#g)" />
+  <text x="30" y="90" fill="#E7C24F" font-family="Merriweather, serif" font-size="34">The</text>
+  <text x="30" y="135" fill="#E7C24F" font-family="Merriweather, serif" font-size="34">Night</text>
+  <text x="30" y="180" fill="#E7C24F" font-family="Merriweather, serif" font-size="34">Watchman</text>
+  <text x="30" y="400" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="20">Louise Erdrich</text>
+</svg>
