@@ -1,18 +1,18 @@
-/* ===== CSS Custom Properties ===== */
+
 :root {
-  --color-bg: #faf7f2;            /* warm parchment */
+  --color-bg: #faf7f2;            
   --color-surface: #ffffff;
-  --color-surface-alt: #f0ead8;   /* antique linen — genre chips, alt surfaces */
-  --color-text: #1c1410;          /* warm ink */
-  --color-text-muted: #6b5d4e;    /* warm taupe */
-  --color-primary: #08446f;       /* site-plan navy */
+  --color-surface-alt: #f0ead8;   
+  --color-text: #1c1410;          
+  --color-text-muted: #6b5d4e;    
+  --color-primary: #08446f;       
   --color-primary-hover: #0a5a96;
-  --color-accent: #762320;        /* site-plan crimson */
+  --color-accent: #762320;        
   --color-accent-hover: #8f2b28;
-  --color-border: #ddd0be;        /* warm greige */
-  --color-star: #c8911c;          /* amber gold */
+  --color-border: #ddd0be;        
+  --color-star: #c8911c;          
   --color-star-empty: #ddd0be;
-  --color-success: #4a6f35;       /* sage green for "Finished" */
+  --color-success: #4a6f35;       
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
@@ -25,19 +25,19 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-  --color-bg: #0e1218;            /* midnight navy */
-  --color-surface: #161e2a;       /* dark navy panel */
-  --color-surface-alt: #1e2d3d;   /* lifted navy */
-  --color-text: #e8e0d4;          /* warm off-white */
-  --color-text-muted: #8fa5be;    /* muted steel blue */
-  --color-primary: #5ab0e8;       /* sky blue — readable on dark */
+  --color-bg: #0e1218;            
+  --color-surface: #161e2a;       
+  --color-surface-alt: #1e2d3d;   
+  --color-text: #e8e0d4;         
+  --color-text-muted: #8fa5be;    
+  --color-primary: #5ab0e8;       
   --color-primary-hover: #7abff0;
-  --color-accent: #e06060;        /* lightened crimson for dark bg */
+  --color-accent: #e06060;        
   --color-accent-hover: #e87878;
   --color-border: #293d52;
-  --color-star: #e8a820;          /* bright amber */
+  --color-star: #e8a820;          
   --color-star-empty: #293d52;
-  --color-success: #7ab85e;       /* sage brightened for dark bg */
+  --color-success: #7ab85e;       
 }
 
 /* ===== Reset & Base ===== */
